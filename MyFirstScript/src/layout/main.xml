@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:android="http://schemas.android.com/apk/res/android" xsi:noNamespaceSchemaLocation="layout.xsd"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+                  android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="MyFirstScript 参数设置" android:textSize="20sp" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:paddingTop="10dp" android:paddingBottom="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="权限状态" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="permissionStatus" android:text="检测中..."/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="10dp" android:text="Shizuku 状态" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="shizukuStatus" android:text="检测中..."/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="10dp" android:text="功能自检" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="selfCheckStatus" android:text="检测中..."/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="10dp" android:text="权限使用说明" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="permissionGuide"
+                      android:text="1. 请选择 root 或 Shizuku 其中一种模式
+2. 未获取 root 时，仅可使用 Shizuku 模式
+3. 权限就绪后，再启动脚本"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="10dp" android:text="权限模式" android:textStyle="bold"/>
+            <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:tag="permissionModeRoot" android:text="使用 root 权限"/>
+            <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:tag="permissionModeAccessibility" android:text="使用 Shizuku 权限"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="10dp" android:text="已安装应用包名" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="packageStatus" android:text="检测中..."/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal" android:paddingTop="10dp">
+                <Button android:text="立即自检" android:layout_weight="1" android:tag="selfCheckBtn"
+                        android:layout_width="0dp"/>
+                <Button android:text="刷新包名" android:layout_weight="1" android:tag="refreshPackageBtn"
+                        android:layout_width="0dp"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="10dp" android:text="运行日志" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="runtimeLog"
+                      android:minHeight="120dp"
+                      android:text="等待日志输出..."/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="6dp" android:paddingBottom="12dp"
+                  android:text="请先启动环境，再启动脚本。"/>
+
+        <Switch android:text="自动化服务环境" android:tag="auto_env"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="10dp">
+            <Button android:text="启动环境" android:layout_weight="1" android:tag="envBtn"
+                    android:layout_width="0dp"/>
+            <Button android:text="启动脚本" android:layout_weight="1" android:tag="startBtn"
+                    android:layout_width="0dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <Button android:text="保存参数" android:layout_weight="1" android:tag="saveAllBtn"
+                    android:layout_width="0dp"/>
+            <Button android:text="系统设置" android:layout_weight="1" android:tag="systemSetting"
+                    android:layout_width="0dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="14dp" android:text="游戏选择" android:textStyle="bold"/>
+        <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="run_wuwa" android:text="鸣潮"/>
+        <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="run_starrail" android:text="星穹铁道"/>
+        <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="run_zzz" android:text="绝区零"/>
+        <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="run_genshin" android:text="原神（敬请期待）" android:enabled="false" android:textColor="#888888"/>
+        <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="run_roco" android:text="洛克王国世界（敬请期待）" android:enabled="false" android:textColor="#888888"/>
+        <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="run_delta" android:text="三角洲行动"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="14dp" android:text="任务队列与运行选项" android:textStyle="bold"/>
+        <Switch android:tag="enableTaskQueue" android:text="启用任务队列"/>
+        <Switch android:tag="enableTaskSequence" android:text="启用顺序执行（按下方队列）"/>
+        <Switch android:tag="autoSwitchAccount" android:text="启用自动换号（全局总开关）"/>
+        <EditText android:layout_width="match_parent" android:layout_height="110dp"
+                  android:tag="taskSequence" android:gravity="top"
+                  android:hint="示例：鸣潮:游戏启动 -> 鸣潮:日常 -> 星穹铁道:游戏启动 -> 星穹铁道:体力"
+                  android:maxLines="6"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="14dp" android:text="看门狗设置" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="卡死阈值（秒）"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="watchdogDeadThresholdSec" android:hint="180" android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="异常处理上限"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="watchdogPopupMaxCount" android:hint="10" android:inputType="number"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="16dp" android:text="妙提醒通知设置" android:textStyle="bold"/>
+        <Switch android:tag="notifyEnable" android:text="启用妙提醒通知"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="请求协议"/>
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="notifySchema" android:text="https|http"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="接口地址"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="notifyBaseUrl" android:hint="https://api.example.com/notify"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Token / Key"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="notifyToken" android:hint="请输入token或key"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="返回格式"/>
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="notifyRespFormat" android:text="JSON|XML|INI"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="返回编码"/>
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="notifyRespEncoding" android:text="UTF8|GBK|GB"/>
+        </LinearLayout>
+
+        <Switch android:tag="notifyOnStart" android:text="脚本启动时通知"/>
+        <Switch android:tag="notifyOnError" android:text="异常时通知"/>
+        <Switch android:tag="notifyOnFinish" android:text="结束时通知"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="8dp" android:text="通知范围"/>
+        <Switch android:tag="notifyGameWuwa" android:text="鸣潮运行时通知"/>
+        <Switch android:tag="notifyGameStarrail" android:text="星穹铁道运行时通知"/>
+        <Switch android:tag="notifyGameZzz" android:text="绝区零运行时通知"/>
+        <Switch android:tag="notifyGameRoco" android:text="洛克王国世界运行时通知"/>
+        <Switch android:tag="notifyGameDelta" android:text="三角洲行动运行时通知"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="18dp" android:text="CS YOLO识别测试" android:textStyle="bold"/>
+        <Switch android:tag="run_cs" android:text="启用CS测试：识别当前屏幕YOLO标签"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="模型路径"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="csYoloOnnxPath" android:hint="/sdcard/MyFirstScript/models/SJZ.onnx"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="标签列表"/>
+            <EditText android:layout_width="match_parent" android:layout_height="90dp"
+                      android:tag="csYoloLabels" android:gravity="top"
+                      android:hint="多个标签用逗号分隔" android:maxLines="5"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="置信度"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="csYoloConfidence" android:hint="0.60" android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="识别次数/间隔ms"/>
+            <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                      android:tag="csYoloLoopTimes" android:hint="1" android:inputType="number"/>
+            <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                      android:tag="csYoloIntervalMs" android:hint="1000" android:inputType="number"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

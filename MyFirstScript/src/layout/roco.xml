@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:android="http://schemas.android.com/apk/res/android" xsi:noNamespaceSchemaLocation="layout.xsd"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+                  android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="洛克王国世界详细设置（敬请期待）" android:textSize="18sp" android:textStyle="bold" android:textColor="#888888"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="12dp" android:text="敬请期待：洛克王国世界功能正在规划中，当前版本暂不开放设置。" android:textColor="#888888"/>
+        <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:tag="rocoLaunchMode" android:text="本地启动|腾讯先锋" android:enabled="false"/>
+        <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:tag="rocoPackageName" android:text="" android:mode="dialog" android:enabled="false"/>
+        <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="rocoStartByPackage" android:text="包名启动" android:enabled="false" android:textColor="#888888"/>
+        <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="rocoStartByNode" android:text="节点启动" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="rocoDailyQuest" android:text="执行日常任务" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="rocoCollectReward" android:text="自动领取奖励" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="rocoFlowerPage" android:text="奇丽页自动刷花" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="rocoDailyTimes" android:hint="2" android:inputType="number" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="rocoSimilarity" android:hint="0.82" android:inputType="numberDecimal" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="rocoAccountSwitchEnable" android:text="洛克王国世界启用自动换号" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="rocoAccountList" android:hint="账号1,账号2,账号3" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="rocoSwitchIntervalMin" android:hint="30" android:inputType="number" android:enabled="false" android:textColor="#888888"/>
+    </LinearLayout>
+</ScrollView>

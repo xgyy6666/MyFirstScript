@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:android="http://schemas.android.com/apk/res/android" xsi:noNamespaceSchemaLocation="layout.xsd"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+                  android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="三角洲行动 · 大战场刷砖" android:textSize="18sp" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="启动方式"/>
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="deltaLaunchMode" android:text="本地启动|腾讯先锋"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="包名启动"/>
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="deltaPackageName" android:text="" android:mode="dialog"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="8dp" android:text="启动入口"/>
+        <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="deltaStartByPackage" android:text="包名启动"/>
+        <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="deltaStartByNode" android:text="节点启动"/>
+        <Switch android:tag="deltaEnable" android:text="启用三角洲行动"/>
+        <Switch android:tag="deltaBattlefieldBrick" android:text="启用大战场刷砖"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="12dp" android:text="战斗参数" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOLO 模型路径"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="deltaYoloOnnxPath" android:hint="/sdcard/MyFirstScript/models/sjz.onnx"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOLO 置信度"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="deltaYoloConfidence" android:hint="0.60" android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OCR 超时（ms）"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="deltaOcrTimeoutMs" android:hint="20000" android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始行动超时（ms）"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="deltaStartActionTimeoutMs" android:hint="10000" android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="部署检测超时（ms）"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="deltaDeployCheckTimeoutMs" android:hint="1200" android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="普通点击延迟（ms）"/>
+            <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                      android:tag="deltaClickMinDelayMs" android:hint="300" android:inputType="number"/>
+            <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                      android:tag="deltaClickMaxDelayMs" android:hint="800" android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="连招点击延迟（ms）"/>
+            <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                      android:tag="deltaComboMinDelayMs" android:hint="120" android:inputType="number"/>
+            <EditText android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                      android:tag="deltaComboMaxDelayMs" android:hint="260" android:inputType="number"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="12dp" android:text="账号与换号设置"/>
+        <Switch android:tag="deltaAccountSwitchEnable" android:text="启用三角洲自动换号"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="deltaAccountList" android:hint="账号1,账号2,账号3"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="换号间隔(分钟)"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:tag="deltaSwitchIntervalMin" android:hint="30" android:inputType="number"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

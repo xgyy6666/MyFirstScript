@@ -1,0 +1,14 @@
+{
+    "name": "MyFirstScript",
+    "packageName": "com.ieasyclick.myfirstscript",
+    "version": "1.0.0",
+    "versionCode": 1,
+    "description": "全能挂机助手Pro",
+    "author": "包工头",
+    "main": "src/js/main.js",
+    "launchConfig": {
+      "displayUI": true,
+      "displayLog": false,
+      "ui": "src/layout/ui.js"
+    }
+  }

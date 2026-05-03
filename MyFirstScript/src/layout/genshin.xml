@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:android="http://schemas.android.com/apk/res/android" xsi:noNamespaceSchemaLocation="layout.xsd"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+                  android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="原神详细设置（敬请期待）" android:textSize="18sp" android:textStyle="bold" android:textColor="#888888"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="12dp" android:text="敬请期待：原神功能正在规划中，当前版本暂不开放设置。" android:textColor="#888888"/>
+        <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:tag="genshinLaunchMode" android:text="本地启动|原神云游戏|网易云游戏" android:enabled="false"/>
+        <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:tag="genshinPackageName" android:text="" android:mode="dialog" android:enabled="false"/>
+        <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="genshinStartByPackage" android:text="包名启动" android:enabled="false" android:textColor="#888888"/>
+        <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:tag="genshinStartByNode" android:text="节点启动" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="genshinEnable" android:text="启用原神任务" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="genshinAutoCombat" android:text="启用自动战斗" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="genshinLeylineTimes" android:hint="4" android:inputType="number" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="genshinPathingName" android:hint="如: 清体力-蒙德-地脉" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="genshinSimilarity" android:hint="0.82" android:inputType="numberDecimal" android:enabled="false" android:textColor="#888888"/>
+        <Switch android:tag="genshinAccountSwitchEnable" android:text="原神启用自动换号" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="genshinAccountList" android:hint="账号1,账号2,账号3" android:enabled="false" android:textColor="#888888"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:tag="genshinSwitchIntervalMin" android:hint="30" android:inputType="number" android:enabled="false" android:textColor="#888888"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified"
+           elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation>
+        <xs:documentation>Android 布局文件的 XSD</xs:documentation>
+        <xs:documentation>7/18/2018 10:39:39 AM</xs:documentation>
+    </xs:annotation>
+
+    <xs:attribute name="background">
+        <xs:annotation>
+            <xs:documentation>背景颜色，示例:
+                "#ff000000" (黑色).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout">
+        <xs:annotation>
+            <xs:documentation>layout
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="checked">
+        <xs:annotation>
+            <xs:documentation>Indicates the initial checked state of this button.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="false"/>
+                        <xs:enumeration value="true"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="inputType">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="text"/>
+                        <xs:enumeration value="phone"/>
+                        <xs:enumeration value="number"/>
+                        <xs:enumeration value="textPassword"/>
+                        <xs:enumeration value="numberPassword"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="gravity">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="bottom"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="center_horizontal"/>
+                        <xs:enumeration value="center_vertical"/>
+                        <xs:enumeration value="left"/>
+                        <xs:enumeration value="right"/>
+                        <xs:enumeration value="top"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="hint">
+        <xs:annotation>
+            <xs:documentation>Hint text to display when the text is empty.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="layout_height">
+        <xs:annotation>
+            <xs:documentation>Specifies the basic height of the view. This is a required attribute for any view inside
+                of a containing layout manager. Its value may be a dimension (such as "12dip") for a constant height or
+                one of the special constants.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="match_parent"/>
+                        <xs:enumeration value="wrap_content"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_margin">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the left, top, right and bottom sides of this view. This space is
+                outside this view's bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_weight">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="match_parent"/>
+                        <xs:enumeration value="wrap_parent"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="dataSource">
+        <xs:annotation>
+            <xs:documentation>Spinner的数据源，使用|进行分割</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_width">
+        <xs:annotation>
+            <xs:documentation>Specifies the basic width of the view. This is a required attribute for any view inside of
+                a containing layout manager. Its value may be a dimension (such as "12dip") for a constant width or one
+                of the special constants.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="match_parent"/>
+                        <xs:enumeration value="wrap_parent"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="maxLength">
+        <xs:annotation>
+            <xs:documentation>Set an input filter to constrain the text length to the specified number.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="orientation">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="horizontal"/>
+                        <xs:enumeration value="vertical"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="padding">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of all four edges. Padding is defined as space between the
+                edges of the view and the view's content. A views size will include it's padding. If a
+                android.R.attr.background is provided, the padding will initially be set to that (0 if the drawable does
+                not have padding). Explicitly setting a padding value will override the corresponding padding found in
+                the background.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="src">
+        <xs:annotation>
+            <xs:documentation>Sets a drawable as the content of this ImageView.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="text">
+        <xs:annotation>
+            <xs:documentation>Text to display.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="defaultText">
+        <xs:annotation>
+            <xs:documentation>Spinner 默认选择文本.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="textColor">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="textSize">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="visibility">
+        <xs:annotation>
+            <xs:documentation>Controls the initial visibility of the view.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="gone"/>
+                        <xs:enumeration value="invisible"/>
+                        <xs:enumeration value="visible"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="url">
+        <xs:annotation>
+            <xs:documentation>webview url .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+</xs:schema>
